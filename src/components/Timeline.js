@@ -3,8 +3,8 @@ import './Timeline.css';
 import TimelineEvent from './TimelineEvent';
 import data from '../data/timeline.json';
 
-const Timeline = () => {
-  const events = data.events;
+const Timeline = (props) => {
+  const events = props.events;
 
   const eventCollection = events.map((event, i) => {
     return <TimelineEvent key={i} tweeter={event.person} status={event.status} time={event.timeStamp} />
