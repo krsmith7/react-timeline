@@ -8,11 +8,11 @@ const TimelineEvent = (props) => {
   return(
     <section className="timeline-event">
 
-        <p className="event-person">Name: {props.tweeter}
+        <p className="event-person"> {props.tweeter}
         </p>
-        <p className="event-status">Status: {props.status}
+        <p className="event-status"> {props.status}
         </p>
-        <p className="event-time">Posted:
+        <p className="event-time">
           <Timestamp time={props.time} />
         </p>
 
