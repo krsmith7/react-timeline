@@ -12,7 +12,8 @@ const TimelineEvent = (props) => {
         </li>
         <li>Status: {props.status}
         </li>
-        <li>Posted: {props.time}
+        <li>Posted: 
+          <Timestamp time={props.time} />
         </li>
       </ul>
     </section>
