@@ -5,12 +5,14 @@ import Timestamp from './Timestamp';
 const TimelineEvent = (props) => {
   // Fill in your code here
 
-
   return(
-    <section className = "timelineevent">
-      <Timestamp />
+    <section>
       <ul>
         <li>Name: {props.tweeter}
+        </li>
+        <li>Status: {props.status}
+        </li>
+        <li>Posted: {props.time}
         </li>
       </ul>
     </section>
