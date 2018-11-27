@@ -11,7 +11,7 @@ const Timeline = () => {
   });
 
   return (
-    <section>
+    <section className="timeline">
       {eventCollection}
     </section>
   );

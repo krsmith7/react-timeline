@@ -6,16 +6,16 @@ const TimelineEvent = (props) => {
   // Fill in your code here
 
   return(
-    <section>
-      <ul>
-        <li>Name: {props.tweeter}
-        </li>
-        <li>Status: {props.status}
-        </li>
-        <li>Posted: 
+    <section className="timeline-event">
+
+        <p className="event-person">Name: {props.tweeter}
+        </p>
+        <p className="event-status">Status: {props.status}
+        </p>
+        <p className="event-time">Posted:
           <Timestamp time={props.time} />
-        </li>
-      </ul>
+        </p>
+
     </section>
   );
 };
