@@ -1,15 +1,15 @@
 import React from 'react';
 import './Timeline.css';
 import TimelineEvent from './TimelineEvent';
-import timelineData from '../data/timeline.json';
 
-const Timeline = () => {
-  // Fill in your code here
-  const events = timelineData["events"];
-  const profileOf = timelineData["person"];
+const Timeline = (props) => {
+  const events = props["tweets"];
+  // const profileOf = timelineData["person"];
+  // console.log(events);
+  // console.log(props);
 
   const eventCollection = events.map((event, i) => {
-    return <TimelineEvent key={i} tweeter={profileOf} tweets={event.person} />
+    return <TimelineEvent key={i} tweeter={event.person} status={event.status} time={event.timeStamp} />
   });
 
   return (
