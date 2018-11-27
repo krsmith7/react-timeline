@@ -1,19 +1,17 @@
 import React from 'react';
 import './Timeline.css';
 import TimelineEvent from './TimelineEvent';
+import data from '../data/timeline.json';
 
-const Timeline = (props) => {
-  const events = props["tweets"];
-  // const profileOf = timelineData["person"];
-  // console.log(events);
-  // console.log(props);
+const Timeline = () => {
+  const events = data.events;
 
   const eventCollection = events.map((event, i) => {
     return <TimelineEvent key={i} tweeter={event.person} status={event.status} time={event.timeStamp} />
   });
 
   return (
-    <section>
+    <section className="timeline">
       {eventCollection}
     </section>
   );
